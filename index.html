@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fighting Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ❤️ HP UI -->
+<div id="ui">
+    <div id="playerHPBar"></div>
+</div>
+
+<!-- 🏆 RESULT SCREEN (MISSION COMPLETE / FAILED) -->
+<div id="resultScreen" style="display:none;">
+    <div id="resultText"></div>
+    <button id="retryBtn" onclick="restartGame()">Try Again</button>
+</div>
+
+<!-- 🎥 CAMERA -->
+<div id="camera">
+
+    <div id="world">
+
+        <div id="bg-overlay"></div>
+
+        <div id="ground"></div>
+
+        <!-- 🟢 FLOATING PLATFORMS -->
+        <div class="platform" style="left:400px; bottom:120px;"></div>
+        <div class="platform" style="left:800px; bottom:160px;"></div>
+        <div class="platform" style="left:1200px; bottom:140px;"></div>
+
+        <!-- 🧍 PLAYER -->
+        <img id="player" src="sprites/idle.png">
+
+        <!-- 👾 ENEMIES (JS GENERATED) -->
+
+    </div>
+</div>
+
+<!-- 🎮 CONTROLS -->
+<div id="controls">
+
+    <div class="pad">
+        <button ontouchstart="startMoveLeft()"
+                ontouchend="stopMove()"
+                onmousedown="startMoveLeft()"
+                onmouseup="stopMove()">⬅️</button>
+
+        <button ontouchstart="startMoveRight()"
+                ontouchend="stopMove()"
+                onmousedown="startMoveRight()"
+                onmouseup="stopMove()">➡️</button>
+    </div>
+
+    <div class="actions">
+        <button onclick="punch()">X</button>
+        <button onclick="jump()">⤴️</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

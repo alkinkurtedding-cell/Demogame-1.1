@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial;
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 🎥 CAMERA */
+#camera {
+    width: 100vw;
+    height: 75vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🌍 WORLD */
+#world {
+    position: absolute;
+    width: 2000px;
+    height: 100%;
+    left: 0;
+}
+
+/* 🌑 OVERLAY */
+#bg-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+}
+
+/* 🧱 GROUND */
+#ground {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #1a1a1a;
+    border-top: 4px solid #555;
+}
+
+/* 🟢 PLATFORMS */
+.platform {
+    position: absolute;
+    width: 150px;
+    height: 15px;
+    background: #333;
+    border-top: 3px solid #777;
+}
+
+/* 🧍 PLAYER */
+#player {
+    width: 130px;
+    position: absolute;
+    bottom: 65px;
+    left: 100px;
+    image-rendering: pixelated;
+}
+
+/* 👾 ENEMIES */
+.enemy {
+    width: 90px;
+    position: absolute;
+    bottom: 65px;
+    image-rendering: pixelated;
+    transition: opacity 0.2s ease;
+}
+
+/* 🎮 CONTROLS */
+#controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.pad, .actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* 🎮 BUTTONS */
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+}
+
+/* ❤️ UI */
+#ui {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 20px;
+    background: #333;
+    border: 2px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* ❤️ PLAYER HP BAR */
+#playerHPBar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, red, darkred);
+    transition: width 0.2s ease;
+}
+
+/* 🏆 RESULT SCREEN */
+#resultScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    z-index: 99999;
+}
+
+/* 🔁 TRY AGAIN BUTTON */
+#retryBtn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
